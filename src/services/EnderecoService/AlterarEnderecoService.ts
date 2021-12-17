@@ -7,7 +7,7 @@ interface IEnderecoRequest{
     bairro: string;
     numero: number;
 }
-
+//Classe resposável por alterar dados de um endereço especifíco através do uuid no banco de dados
 class AlterarEnderecoServices{
 
     async execute({logradouro, bairro, numero}: IEnderecoRequest): Promise<Endereco | undefined>{

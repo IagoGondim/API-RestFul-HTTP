@@ -5,7 +5,7 @@ interface IClienteRequest{
     nome: string;
     tipo: string;
 }
-
+// Classe responsável por criar um cliente no banco de dados
 class CreateClienteServices{
     async execute({nome, tipo}: IClienteRequest){
         const clientesRepository = getCustomRepository(ClientesRepositories);

@@ -5,7 +5,7 @@ interface IContratoRequest{
     ponto_id: string;
     estado: string;
     }
-
+// Classe resposável por criar um contrato no banco de dados
 class CreateContratoServices{
     async execute({ponto_id, estado}): Promise<IContratoRequest>{
         const contratosRepository = getCustomRepository(ContratoRepositories);

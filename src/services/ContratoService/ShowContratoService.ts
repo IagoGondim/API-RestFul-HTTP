@@ -5,7 +5,7 @@ import { ContratoRepositories} from "../../repositories/ContratoRepositories"
 interface IContratoRequest{
     id: string;
 }
-
+// Classe responsável por mostrar um contrato específico através do uuid no banco de dados
 class ShowContratoServices{
 
     async execute({id}: IContratoRequest): Promise<Contrato>{

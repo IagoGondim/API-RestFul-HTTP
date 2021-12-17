@@ -1,6 +1,6 @@
 import { Router } from "express";
 import EnderecoController from "../controllers/EnderecoController"
-
+//rotas Endereco
 const enderecosRouter = Router();
 const enderecosController = new EnderecoController();
 

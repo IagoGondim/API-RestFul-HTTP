@@ -1,8 +1,9 @@
 import {Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn} from "typeorm";
 import {v4 as uuid  } from "uuid";
 import { Cliente } from "./Cliente";
+import { Contrato } from "./Contrato";
 import { Endereco } from "./Endereco";
-
+//Entidade responsável por mapear para a classe de banco de dados t_ponto
 @Entity("t_ponto")
 class Ponto {
 
@@ -26,6 +27,9 @@ class Ponto {
     endereco: Endereco;
     @Column()
     endereco_id: string;
+
+    @OneToOne(()=>Contrato, (contrato)=>contrato.ponto )
+    contrato: Contrato
     
     @DeleteDateColumn()
     data_remocao: Date;

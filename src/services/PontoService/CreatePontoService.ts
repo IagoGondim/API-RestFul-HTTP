@@ -5,7 +5,7 @@ interface IPontoRequest{
     cliente_id: string;
     endereco_id: string;
 }
-
+// Classe resposável por criar um ponto no banco de dados
 class CreatePontoServices{
     async execute({cliente_id, endereco_id}: IPontoRequest){
         const pontosRepository = getCustomRepository(PontosRepositories);

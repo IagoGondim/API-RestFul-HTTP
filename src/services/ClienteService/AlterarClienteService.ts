@@ -7,7 +7,7 @@ interface IClientRequest{
     nome: string;
     tipo: string;
 }
-
+//Classe responsável por alterar dados de um cliente especifíco através do uuid no banco de dados
 class AlterarClienteServices{
 
     async execute({nome, tipo, id}: IClientRequest): Promise<Cliente>{

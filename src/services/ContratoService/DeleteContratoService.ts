@@ -5,7 +5,7 @@ import { ContratoRepositories} from "../../repositories/ContratoRepositories"
 interface IContratoRequest{
     id: string;
 }
-
+// Classe responsável por deletar um contrato específico através do uuid no banco de dados
 class DeleteContratoServices{
 
     async execute({id}: IContratoRequest): Promise<void>{
@@ -20,6 +20,8 @@ class DeleteContratoServices{
         }
 
         await contratosRepository.remove(contrato)
+
+        
     }
     
 }

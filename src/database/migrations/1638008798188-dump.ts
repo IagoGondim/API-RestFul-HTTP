@@ -1,5 +1,5 @@
 import {MigrationInterface, QueryRunner} from "typeorm";
-
+// Depuração do banco de dados.
 export class dump1638008798188 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {

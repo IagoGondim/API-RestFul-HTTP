@@ -1,6 +1,6 @@
 import { Router } from "express";
 import PontoController from "../controllers/PontoController"
-
+//rotas pontos
 const pontosRouter = Router();
 const pontosController = new PontoController();
 

@@ -5,7 +5,7 @@ import { ClientesRepositories} from "../../repositories/ClientesRepositories"
 interface IClientRequest{
     id: string;
 }
-
+//Classe resposável por deletar um cliente especifíco através do uuid no banco de dados
 class DeleteClienteServices{
 
     async execute({id}: IClientRequest): Promise<void>{

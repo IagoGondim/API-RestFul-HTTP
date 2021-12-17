@@ -1,15 +1,15 @@
 import { getCustomRepository } from "typeorm";
 import {Evento} from "../../entities/ContratoEvento"
-import { EventosRepositories} from "../../repositories/ContratoEventoRepositories"
+import { EventoRepositories} from "../../repositories/EventoRepositories"
 
 interface IEventoRequest{
     id: string;
 }
-
+// Classe responsável por mostrar histórico de um contrato especifíco
 class ShowEventoServices{
 
     async execute({id}: IEventoRequest): Promise<Evento>{
-        const eventosRepository = getCustomRepository(EventosRepositories);
+        const eventosRepository = getCustomRepository(EventoRepositories);
         
         const evento = await eventosRepository.findOne(id);
 

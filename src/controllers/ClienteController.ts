@@ -4,7 +4,7 @@ import { ShowClienteServices} from "../services/ClienteService/ShowClienteServic
 import { CreateClienteServices} from "../services/ClienteService/CreateClienteService"
 import { AlterarClienteServices } from "../services/ClienteService/AlterarClienteService";
 import { DeleteClienteServices } from "../services/ClienteService/DeleteClienteService";
-
+// Controller responsável pelos métodos de buscar, mostrar, criar, atualizar e deletar
 export default class ClienteController{
     async index(request: Request, response: Response): Promise<Response> {
         try{

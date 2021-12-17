@@ -1,6 +1,6 @@
 import {Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn} from "typeorm";
 import {v4 as uuid  } from "uuid";
-
+//Entidade responsável por mapear para a classe de banco de dados t_endereco
 @Entity("t_endereco")
 class Endereco {
 

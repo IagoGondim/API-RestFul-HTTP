@@ -5,7 +5,9 @@ import { PontosRepositories} from "../../repositories/PontoRepositories"
 interface IPontoRequest{
     id: string;
 }
+//Classe resposável por mostrar um ponto especifíco através do uuid no banco de dados
 
+// Classe responsável 
 class ShowPontoServices{
 
     async execute({id}: IPontoRequest): Promise<Ponto>{

@@ -6,6 +6,7 @@ interface IEnderecoRequest{
     bairro: string;
     numero: number;
 }
+// Classe resposável por criar um endereço no banco de dados
 class CreateEnderecoServices{
     async execute({logradouro, bairro, numero}: IEnderecoRequest){
         const enderecosRepository = getCustomRepository(EnderecosRepositories);

@@ -11,6 +11,7 @@ router.use("/api/v1/clientes", clientesRoutes);
 router.use("/api/v1/enderecos", enderecosRoutes);
 router.use("/api/v1/pontos", pontosRoutes);
 router.use("/api/v1/contratos", contratosRoutes);
-router.use("/api/v1/{id}/historicos", eventosRouter)
+router.use("/api/v1/historico", eventosRouter)
+
 
 export default router

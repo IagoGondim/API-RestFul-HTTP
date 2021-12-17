@@ -4,7 +4,7 @@ import { ShowEnderecoServices} from "../services/EnderecoService/ShowEnderecoSer
 import { CreateEnderecoServices} from "../services/EnderecoService/CreateEnderecoService"
 import { AlterarEnderecoServices } from "../services/EnderecoService/AlterarEnderecoService";
 import { DeleteEnderecoServices } from "../services/EnderecoService/DeleteEnderecoService";
-
+// Controller endereço responsável pelos métodos de buscar, mostrar, criar, atualizar e deletar
 export default class EnderecoController{
     async index(request: Request, response: Response): Promise<Response> {
         try{

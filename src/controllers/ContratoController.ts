@@ -1,10 +1,12 @@
 import { Request, Response } from "express";
 import { ListContratoServices} from "../services/ContratoService/ListContratoService";
-import { ShowContratoServices} from "../services/ContratoService/ShowContratoService"
+import { ShowContratoServices} from "../services/ContratoService/ShowContratoService";
 import { CreateContratoServices} from "../services/ContratoService/CreateContratoService"
 import { DeleteContratoServices } from "../services/ContratoService/DeleteContratoService";
-
+import { AlterarContratoServices} from "../services/ContratoService/AlterarContratoService";
+// Controller contrato responsável pelos métodos de buscar, mostrar, criar e deletar
 export default class ContratoController{
+    //lista os contratos ativos
     async index(request: Request, response: Response): Promise<Response> {
         try{
         const listContrato = new ListContratoServices();
@@ -51,6 +53,21 @@ export default class ContratoController{
     }catch(err){
         return response.status(400).json({error:err.message});
     }}
+    async update(request: Request, response: Response): Promise<Response>{
+        try{
+        const {estado} = request.body;
+        const {id} = request.params;
+
+        const alterarContrato = new AlterarContratoServices();
+
+        const contrato = await alterarContrato.execute({estado,id});
+
+        return response.json(contrato);
+        } catch(err){
+            return response.status(400).json({error:err.message});
+    }}
+
 }
+
 export {ContratoController}
 
