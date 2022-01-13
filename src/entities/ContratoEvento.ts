@@ -22,7 +22,7 @@ class Evento {
     contrato_id: string;
 
     @Column()
-    estado_anterior: String;
+    estado_anterior: string;
 
     @Column()
     estado_posterior: string;

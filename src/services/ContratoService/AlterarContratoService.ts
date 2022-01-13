@@ -23,16 +23,14 @@ class AlterarContratoServices{
         if(!contrato){
             throw new Error("Contrato não encontrado");
         }
+            const createContratoEvento = new CreateContratoEventoServices().execute({
+                contrato_id:contrato.id,
+                estado_antigo:contratoAntigo,
+                estado_novo:estado
+            })   
         contrato.estado = estado
-        const createContratoEvento = new CreateContratoEventoServices().execute({
-            contrato_id:contrato.id,
-            data_atualizacao:contrato.data_atualizacao,
-            estado_antigo:contratoAntigo,
-            estado_novo:estado
-    
-    })
+        
         await contratoRepository.save(contrato);
-        //await eventoRepository.save(createContratoEvento);
 
         return contrato
     }

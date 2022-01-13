@@ -4,5 +4,5 @@ import EventoController from "../controllers/EventoContratoController"
 const eventosRouter = Router();
 const eventosController = new EventoController();
 
-eventosRouter.get("/:id", eventosController.show);
+eventosRouter.get("/:contrato_id/historico", eventosController.show);
 export default eventosRouter;

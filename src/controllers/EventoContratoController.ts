@@ -7,11 +7,10 @@ export default class EventoController{
     
     async show(request: Request, response: Response): Promise<Response>{
         try{
-        const {id} = request.params;
-
+        const {contrato_id} = request.params;
         const showEvento = new ShowEventoServices();
 
-        const evento = await showEvento.execute({id});
+        const evento = await showEvento.execute({contrato_id});
 
         return response.json(evento);
     }catch(err){
